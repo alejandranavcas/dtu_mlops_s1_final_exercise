@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 from torch.utils.data import Dataset
-# y ahora vamos a probar lo del merge conflict de nuevo
+
 
 
 def mnist():
