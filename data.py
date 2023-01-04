@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 from torch.utils.data import Dataset
-
+# vamos a escribir un comentario random
 
 
 def mnist():
