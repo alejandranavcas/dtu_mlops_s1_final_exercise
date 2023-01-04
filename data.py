@@ -14,7 +14,7 @@ def mnist():
         images = []
         labels = []
         for file in range(0,5):
-            with np.load(path+'\\train_'+str(file)+'.npz') as data1:
+            with np.load(path+'/train_'+str(file)+'.npz') as data1:
                 img1 = data1['images']
                 for img11 in img1:
                     images.append(img11)
@@ -23,7 +23,7 @@ def mnist():
                     labels.append(lab11)
 
         # Save the concatenated lists to a new .npz file
-        np.savez_compressed(r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\data\corruptmnist\train.npz', images=np.array(images), labels=np.array(labels))
+        np.savez_compressed(r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/data/corruptmnist/train.npz', images=np.array(images), labels=np.array(labels))
 
 
     class NpzDataset(torch.utils.data.Dataset):
@@ -40,9 +40,9 @@ def mnist():
 
 
     # Load train and test sets
-    concat_npz(r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\data\corruptmnist')
-    data_train = np.load(r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\data\corruptmnist/train.npz')
-    data_test = np.load(r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\data\corruptmnist/test.npz')
+    concat_npz(r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/data/corruptmnist')
+    data_train = np.load(r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/data/corruptmnist/train.npz')
+    data_test = np.load(r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/data/corruptmnist/test.npz')
 
     # Create Datasets from the npz files
     dataset_train = NpzDataset(data_train)

@@ -49,7 +49,7 @@ def train(lr):
 
         else:
             print(f"Training loss: {running_loss/len(trainloader)}")
-            torch.save(model.state_dict(), r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\s1_development_environment\exercise_files\final_exercise\checkpoint.pth')
+            torch.save(model.state_dict(), r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/checkpoint.pth')
 
 
 # @click.command()
@@ -81,8 +81,7 @@ def evaluate(model_checkpoint):
 # cli.add_command(train)
 # cli.add_command(evaluate)
 
-
 if __name__ == "__main__":
     # cli()
     # train(1e-3)    
-    evaluate(r'C:\Users\carol\Documents\1ºAI\dtu_mlops-main\s1_development_environment\exercise_files\final_exercise\checkpoint.pth')
+    evaluate(r'/Users/alejandranavarrocastillo/Documents/GitHub/dtu_mlops_s1_final_exercise/checkpoint.pth')

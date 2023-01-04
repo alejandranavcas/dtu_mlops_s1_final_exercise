@@ -23,7 +23,3 @@ class MyAwesomeModel(nn.Module):
         x = self.softmax(x)
         
         return x
-
-
-
-        
